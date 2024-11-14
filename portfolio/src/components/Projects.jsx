@@ -6,7 +6,7 @@ const projects = [
     name: 'Earthen Bottle',
     href: '#',
     description: '$48',
-    imageSrc: 'portfolio/src/assets/bfs.jpeg',
+    imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/bfs.jpg',
     imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   },
   {
