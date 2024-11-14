@@ -12,7 +12,17 @@ function Contact() {
     window.open("https://www.linkedin.com/in/wiktor-mazepa-812199338/")
   }
     return (
-      <div id="contact" className="flex justify-end">
+      <div id="contact" className="flex-col ">
+        <div className="mb-12">
+          <h1 className="text-4xl text-gray-900 dark:text-white mb-4 font-abeezee font-semibold">Get in touch</h1>
+        </div>
+        <div className="mb-8">
+          <p className="text-1xl text-gray-900 dark:text-white ">+48 881 451 000</p>
+        </div>
+        <div className="mb-8">
+          <a href="mailto:wiktor.mazepa@gmail.com " className="text-1xl text-gray-900 dark:text-white ">wiktor.mazepa@gmail.com</a>
+        </div>
+        <div>
          <button
             type="button"
             onClick={() => handleGithub()}
@@ -27,6 +37,7 @@ function Contact() {
           >
         <BsLinkedin className="text-4xl text-gray-900 dark:text-white" />
         </button>
+        </div>
       </div>
     );
 }

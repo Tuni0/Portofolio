@@ -91,8 +91,8 @@ function Projects() {
 
     <div id='projects' className={`z-0 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
 
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-screen-xl lg:px-8   ">
-        <h2 className="sr-only">Products</h2>
+      <div className="mx-0 px-0 max-w-2xl  py-16  sm:py-24 lg:max-w-screen-xl    ">
+        <h2 className="text-left text-4xl text-gray-900 dark:text-white mb-4 font-abeezee font-semibold">Projects</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
         
