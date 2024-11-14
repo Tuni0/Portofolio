@@ -23,12 +23,10 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
    <div className="min-h-screen">
-      <Routes >
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
+      <Home/>
+      <About/>
+      <Projects/>
+      <Contact/>
    </div>
    
    </ThemeContext.Provider>

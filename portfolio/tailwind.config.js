@@ -11,5 +11,7 @@ export default {
         abeezee: 'abeezee',
       }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

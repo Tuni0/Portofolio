@@ -1,5 +1,5 @@
-import React, { useEffect,useContext, useState, createContext } from "react";
-import {Link} from "react-router-dom";
+import React, { useEffect,useContext, useState, createContext, useRef } from "react";
+import { Link } from 'react-scroll';
 import {
   Dialog,
   DialogPanel,
@@ -15,8 +15,35 @@ import { ThemeContext } from "../App.jsx";
 function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme } = useContext(ThemeContext);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  function handleProjectsClick() {
+    window.location.href = '#projects';
+  }
+  function handleHomeClick() {
+    window.scrollTo(0, 0);
+  }
+  function handleAboutClick() {
+    window.location.href = '#about';
+  }
+  function handleContactClick() {
+    window.location.href = '#contact';
+  }
+
     return (
-      <div className={theme === 'dark' ? 'dark' : ''}>
+      <div id="home" className={`sticky top-0 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-zinc-900`} ref={ref} >
         <header className="header">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
@@ -37,19 +64,20 @@ function Home() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <Link to='/' className="text-sm/6 font-semibold text-gray-900 dark:text-white">
-            Home
-          </Link>
-          <Link to='/about' className="text-sm/6 font-semibold text-gray-900 dark:text-white ">
-            About
-          </Link>
-          <Link to='/projects' className="text-sm/6 font-semibold text-gray-900 dark:text-white">
-            Projects
-          </Link>
-          <Link to='/contact' className="text-sm/6 font-semiboldtext-gray-900 dark:text-white">
-            Contact
-          </Link>
+        <PopoverGroup className="hidden lg:flex lg:gap-x-16">
+        <button onClick={handleHomeClick} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee ">
+              Home
+          </button>
+          <button onClick={handleAboutClick} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee ">
+              About
+          </button>
+          
+          <button onClick={handleProjectsClick} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+              Projects
+          </button>
+          <button onClick={handleContactClick} className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+              Contact
+          </button>
           
         </PopoverGroup>
 
@@ -76,20 +104,22 @@ function Home() {
 
           </div>
           <div className="mt-6 flow-root">
-            <div className={`-my-6 divide-y divide-gray-500/10`}>
+            <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Link to='/'  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-500">
-                  Home
-                </Link>
-                <Link to='/about' className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-500">
-                  About
-                </Link>
-                <Link to='/projects' className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-500">
-                  Projects
-                </Link>
-                <Link to='/contact' className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-500">
-                  Contact
-                </Link>
+                <button onClick={handleHomeClick} className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+                    Home
+                </button>
+                <button onClick={handleAboutClick} className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+                    About
+                </button>
+                
+                <button onClick={handleProjectsClick} className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+                    Projects
+                </button>
+                <button onClick={handleContactClick} className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee">
+                    Contact
+                </button>
+               
               </div>
               <div className="py-6">
              <ThemeSwitcher/>
