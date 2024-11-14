@@ -52,7 +52,6 @@ const projects = [
   {
     id: 1,
     name: 'BFS',
-    href: '#',
     description: 'Take part with bfs project, aimed to create platform for monitoring cash flow in company and capital groups.',
     tags: [names.csharp, names.sql, names.xml, names.dotnet],
     imageSrc: 'https://ewamazepa.com/wp-content/uploads/2024/01/bfsmockup1.png',
@@ -61,7 +60,6 @@ const projects = [
   {
     id: 2,
     name: 'Calculator',
-    href: '#',
     description: 'Simple calculator windows app with trigonometry functions plots.',
     tags: [names.csharp],
     imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/calc.jpg',
@@ -69,22 +67,13 @@ const projects = [
   },
   {
     id: 3,
-    name: 'Focus Paper Refill',
-    href: '#',
-    description: '$89',
+    name: 'Kotlin To-Do List',
+    description: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
     tags: [names.kotlin, names.firebase],
-    imageSrc: 'https://images.credential.net/embed/18sh899n.png',
-    imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
+    imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/todo.jpg',
+    imageAlt: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
   },
-  {
-    id: 4,
-    name: 'Machined Mechanical Pencil',
-    href: '#',
-    description: '$35',
-    tags: [],
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-04.jpg',
-    imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
-  },
+
   // More projects...
 ]
 
@@ -109,12 +98,12 @@ function Projects() {
         
           {projects.map((project) => (
               <div className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-3xl bg-white dark:bg-neutral-800" >
-            <a key={project.id} href={project.href} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden  bg-gray-200 xl:aspect-h-12 xl:aspect-w-10 rounded-[36px] ring-1 ring-inset ring-white dark:ring-black  hover:animate-bounce">
+            <a key={project.id} className="group">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 xl:aspect-h-12 xl:aspect-w-10 rounded-[36px] ring-1 ring-inset ring-white dark:ring-black hover:md:animate-bounce  ">
                 <img
                   alt={project.imageAlt}
                   src={project.imageSrc}
-                  className="size-full object-cover object-center group-hover:opacity-75   "
+                  className="size-full object-cover object-center group-hover:opacity-75  "
                 />
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-700 dark:text-white">{project.name}</h3>
