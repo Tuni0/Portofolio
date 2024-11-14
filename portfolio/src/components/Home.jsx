@@ -43,7 +43,7 @@ function Home() {
   }
 
     return (
-      <div id="home" className={`sticky top-0 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-zinc-900`} ref={ref} >
+      <div id="home" className={`sticky top-0 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-zinc-900`} ref={ref} >
         <header className="header">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">

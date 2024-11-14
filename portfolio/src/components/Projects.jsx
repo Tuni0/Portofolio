@@ -1,3 +1,4 @@
+import React from "react"
 
 const projects = [
   {
@@ -5,7 +6,7 @@ const projects = [
     name: 'Earthen Bottle',
     href: '#',
     description: '$48',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/category-page-04-image-card-01.jpg',
+    imageSrc: 'portfolio/src/assets/bfs.jpeg',
     imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
   },
   {
@@ -38,7 +39,7 @@ const projects = [
 function Projects() {
 
   return (
-    <div id='projects' className="bg-white">
+    <div id='projects' className="bg-white z-0">
 
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
