@@ -23,7 +23,7 @@ const names ={
   webassembly: 'WebAssembly',
   xml: 'XML',
   yaml: 'YAML',
-
+  firebase: 'Firebase',
 }
 
 const colors = {
@@ -35,7 +35,7 @@ const colors = {
   "C": "c",
   "C++": "c++",
   "rust": "rust",
-  "kotlin": "kotlin",
+  "Kotlin":     'rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10 dark:bg-purple-400/10 dark:text-purple-500 dark:ring-purple-400/20',
   "SQL":        'rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 dark:bg-blue-400/10 dark:text-blue-500 dark:ring-blue-500/20',
   "visual basic": "visualbasic",
   "vba": "vba",
@@ -45,7 +45,7 @@ const colors = {
   "webassembly": "webassembly",
   "XML":          'rounded-md bg-orange-50 px-2 py-1 text-xs font-medium text-orange-700 ring-1 ring-inset ring-orange-700/10 dark:bg-orange-400/10 dark:text-orange-500 dark:ring-orange-500/20',
   "yaml": "yaml",
-  "firebase": 'rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-500 ring-1 ring-inset ring-red-600/20 dark:bg-red-400/10 dark:text-red-500 dark:ring-red-400/20',
+  "Firebase": 'rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-500 ring-1 ring-inset ring-red-600/20 dark:bg-red-400/10 dark:text-red-500 dark:ring-red-400/20',
 }
 
 const projects = [
@@ -108,13 +108,21 @@ function Projects() {
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-700 dark:text-white">{project.name}</h3>
               <p className="mt-1 mb-4 text-sm  text-gray-900 dark:text-white">{project.description}</p>
-              {project.tags && project.tags.map((tagColor, index) => (
-                  <span key={index} className={`inline-flex items-center ${colors[tagColor]} mr-2`}>
-                    {Object.keys(colors).find((key) => colors[key] === colors[tagColor])}
-                    
+              {project.tags && project.tags.map((tag, index) => {
+                const key = Object.keys(names).find(key => names[key] === tag);
+                console.log("tag",tag)
+                console.log("key",key)
+                console.log("index",index)
+                console.log("names[key]",names[key])
+                console.log("colors[tag]",colors[tag])
+                return (
+                  <span key={index} className={`inline-flex items-center ${colors[tag]} mr-2`}>
+                    {tag}
                   </span>
-                ))}
-             
+                  
+                );
+                })}
+              
             </a>
             </div>
           ))}
