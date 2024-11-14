@@ -70,7 +70,7 @@ const projects = [
     name: 'Kotlin To-Do List',
     description: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
     tags: [names.kotlin, names.firebase],
-    imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/todo-ss.png',
+    imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/todoo.png',
     imageAlt: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
   },
 
