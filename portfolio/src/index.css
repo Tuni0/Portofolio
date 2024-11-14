@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.light {
+  background-color: #ffffff;
+
+}
+
+body.dark {
+  background-color: #101112;
+
+}
+
+@font-face{
+  font-family: "abeezee";
+  src: url('../ABeeZee-Regular.otf');
+}
