@@ -69,7 +69,7 @@ const projects = [
     id: 3,
     name: 'Kotlin To-Do List',
     description: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
-    tags: [names.kotlin, names.firebase],
+    tags: [names.kotlin, names.firebase, names.xml],
     imageSrc: 'https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/todoo.png',
     imageAlt: 'Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.',
   },
@@ -91,15 +91,15 @@ function Projects() {
 
     <div id='projects' className={`z-0 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
 
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-5xl lg:px-8   ">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-screen-xl lg:px-8   ">
         <h2 className="sr-only">Products</h2>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-8 ">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
         
           {projects.map((project) => (
-              <div className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-3xl bg-white dark:bg-neutral-800" >
+              <div className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-[30px] bg-white dark:bg-neutral-800" >
             <a key={project.id} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 xl:aspect-h-12 xl:aspect-w-10 rounded-[36px] ring-1 ring-inset ring-white dark:ring-black hover:md:animate-bounce  ">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-12 xl:aspect-w-10  rounded-[30px] hover:md:animate-bounce  ">
                 <img
                   alt={project.imageAlt}
                   src={project.imageSrc}
@@ -108,13 +108,13 @@ function Projects() {
               </div>
               <h3 className="mt-4 text-lg font-medium text-gray-700 dark:text-white">{project.name}</h3>
               <p className="mt-1 mb-4 text-sm  text-gray-900 dark:text-white">{project.description}</p>
+             {
+             /*
+             jeśli tagi nie są puste i wyciągam z tablicy projektów wszystkie tagi, 
+             !przyjmując ich wartość a nie klucz jako tag oraz index od 0 w górę,
+             *w celu wpisania css do spana wystarczy posłużyć sie więc wartością tagu (tag), która jest kluczem do słownika colors
+             */}
               {project.tags && project.tags.map((tag, index) => {
-                const key = Object.keys(names).find(key => names[key] === tag);
-                console.log("tag",tag)
-                console.log("key",key)
-                console.log("index",index)
-                console.log("names[key]",names[key])
-                console.log("colors[tag]",colors[tag])
                 return (
                   <span key={index} className={`inline-flex items-center ${colors[tag]} mr-2`}>
                     {tag}
@@ -133,5 +133,4 @@ function Projects() {
   )
 }
 export default Projects
-
 
