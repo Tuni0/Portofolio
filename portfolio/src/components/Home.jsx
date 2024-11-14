@@ -16,18 +16,6 @@ function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme } = useContext(ThemeContext);
 
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef();
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   function handleProjectsClick() {
     window.location.href = '#projects';
@@ -43,10 +31,10 @@ function Home() {
   }
 
     return (
-      <div id="home" className={`sticky top-0 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-zinc-900`} ref={ref} >
+      <div id="home" className={`sticky top-0 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-800/90 backdrop-blur-sm rounded-3xl`} >
         <header className="header">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
-        <div className="flex lg:flex-1">
+      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 ">
+        <div className="flex lg:flex-1 ">
         <span className="sr-only">Your Company</span>
             <img
               alt=""

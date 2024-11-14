@@ -8,11 +8,11 @@ body.light {
 }
 
 body.dark {
-  background-color: #101112;
+  background-color: #171717;
 
 }
 
 @font-face{
   font-family: "abeezee";
-  src: url('../ABeeZee-Regular.otf');
+  src: url('../Roboto-Regular.ttf');
 }
