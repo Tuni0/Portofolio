@@ -72,7 +72,7 @@ const projects = [
     name: 'Focus Paper Refill',
     href: '#',
     description: '$89',
-    tags: [namse.kotlin, names.firebase],
+    tags: [names.kotlin, names.firebase],
     imageSrc: 'https://images.credential.net/embed/18sh899n.png',
     imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
   },
