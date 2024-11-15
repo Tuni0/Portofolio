@@ -12,7 +12,7 @@ import {
 import ThemeSwitcher from './ThemeSwitcher.jsx'
 import { ThemeContext } from "../App.jsx";
 
-function Home() {
+function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme } = useContext(ThemeContext);
 
@@ -31,14 +31,14 @@ function Home() {
   }
 
     return (
-      <div id="home" className={`sticky top-0 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-800/90 backdrop-blur-sm rounded-3xl`} >
+      <div id="home" className={`sticky top-4 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white/70 dark:bg-neutral-800/70 backdrop-blur-sm rounded-3xl`} >
         <header className="header">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 ">
         <div className="flex lg:flex-1 ">
         <span className="sr-only">Your Company</span>
             <img
               alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://tailwindui.com/plus/img/logos/mark.svg?color=violet&shade=500 dark:https://tailwindui.com/plus/img/logos/mark.svg?color=violet&shade=600"
               className="h-8 w-auto"
             />
         </div>
@@ -121,4 +121,4 @@ function Home() {
     );
   }
 
-export default Home
+export default Navbar

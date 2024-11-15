@@ -89,16 +89,15 @@ function Projects() {
 
 
 
-    <div id='projects' className={`z-0 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
-
-      <div className="mx-0 px-0 max-w-2xl  py-16  sm:py-24 lg:max-w-screen-xl    ">
-        <h2 className="text-left text-4xl text-gray-900 dark:text-white mb-4 font-abeezee font-semibold">Projects</h2>
+    <div id='projects' className={`z-0 mt-12 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
+      <div className="flex flex-col items-center py-16 sm:py-24 lg:max-w-screen-xl">
+        <h2 className="text-left self-start text-4xl text-violet-500 dark:text-violet-600 mb-8 mt-4 font-abeezee font-semibold">Projects</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
         
           {projects.map((project) => (
-              <div className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-[30px] bg-white dark:bg-neutral-800" >
-            <a key={project.id} className="group">
+              <div key={project.id} className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-[30px] bg-white dark:bg-neutral-800" >
+            <a className="group">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-12 xl:aspect-w-10  rounded-[30px] hover:md:animate-bounce  ">
                 <img
                   alt={project.imageAlt}

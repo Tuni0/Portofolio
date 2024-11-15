@@ -14,7 +14,7 @@ function Contact() {
     return (
       <div id="contact" className="flex-col ">
         <div className="mb-12">
-          <h1 className="text-4xl text-gray-900 dark:text-white mb-4 font-abeezee font-semibold">Get in touch</h1>
+          <h1 className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold">Get in touch</h1>
         </div>
         <div className="mb-8">
           <p className="text-1xl text-gray-900 dark:text-white ">+48 881 451 000</p>

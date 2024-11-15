@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { Routes, Route, Router } from "react-router-dom";
-import Home from './components/Home.jsx';
+import Navbar from './components/Navbar.jsx';
 import About from './components/About.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
@@ -25,7 +25,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
    <div className="min-h-screen">
-      <Home/>
+      <Navbar/>
       <About/>
       <Skills/>
       <Projects/>
