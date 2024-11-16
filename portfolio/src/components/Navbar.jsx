@@ -31,7 +31,7 @@ function Navbar() {
   }
 
     return (
-      <div id="home" className={`sticky top-4 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-white/70 dark:bg-neutral-800/70 backdrop-blur-sm rounded-3xl`} >
+      <div id="home" className={`sticky top-4 z-10 ${theme === 'dark' ? 'dark' : ''}  bg-gray-100/70 dark:bg-neutral-800/70 backdrop-blur-sm rounded-3xl`} >
         <header className="header">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 ">
         <div className="flex lg:flex-1 ">
