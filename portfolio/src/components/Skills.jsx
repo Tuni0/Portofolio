@@ -76,12 +76,12 @@ function Skills() {
             
           </div>
           <h3 className="text-left mt-8 self-start text-2xl text-black dark:text-white mb-2  font-abeezee font-semibold">Certificates</h3>
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
-                <div className="aspect-h-3 aspect-w-4 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-6 xl:aspect-w-8 rounded-[30px] ">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 ">
+                <div className="w-fit h-fit  max-w-screen-md ">
                 <img
                   alt="React"
                   src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/reactCertification.png"
-                  className=" "
+                  className="  rounded-[30px] "
                 />
               
               </div>
