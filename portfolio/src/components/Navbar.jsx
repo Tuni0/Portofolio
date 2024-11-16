@@ -18,15 +18,22 @@ function Navbar() {
 
 
   function handleProjectsClick() {
+    if(mobileMenuOpen) {setMobileMenuOpen(false)};
+
     window.location.href = '#projects';
   }
   function handleHomeClick() {
+    if(mobileMenuOpen) {setMobileMenuOpen(false)};
     window.scrollTo(0, 0);
   }
   function handleAboutClick() {
+    if(mobileMenuOpen) {setMobileMenuOpen(false)};
+
     window.location.href = '#about';
   }
   function handleContactClick() {
+    if(mobileMenuOpen) {setMobileMenuOpen(false)};
+
     window.location.href = '#contact';
   }
 
