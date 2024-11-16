@@ -89,8 +89,8 @@ function Projects() {
 
 
 
-    <div id='projects' className={`z-0 mt-12 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
-      <div className="flex flex-col items-center py-16 sm:py-24 lg:max-w-screen-xl">
+    <div id='projects' className={`z-0 mt-4 ${theme === 'dark' ? 'dark' : ''}  bg-white dark:bg-neutral-900 `}>
+      <div className="flex flex-col items-center py-2 sm:py-4 lg:max-w-screen-xl">
         <h2 className="text-left self-start text-4xl text-violet-500 dark:text-violet-600 mb-8 mt-4 font-abeezee font-semibold">Projects</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
