@@ -49,7 +49,7 @@ function About() {
       <div id="about" className={`z-0 mt-48 ${theme === 'dark' ? 'dark' : ''} `}>
         <div className="flex flex-wrap justify-center lg:justify-between">
         <div className="lg:max-w-[60%]">
-        <p className="text-5xl  flex justify-start font-abeezee text-violet-500 dark:text-violet-600 h-20 mb-4">{name}</p>
+        <p className="text-5xl  flex justify-start font-abeezee text-violet-500 dark:text-violet-600 h-20 mb-8">{name}</p>
 
         <p className="text-black dark:text-white text-justify mb-8"> 
           I am studing at Wrocław University of Science and Technology. My major is Intelligence Electronics. I started learning front-end technologies like 
