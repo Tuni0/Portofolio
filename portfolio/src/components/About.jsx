@@ -49,7 +49,7 @@ function About() {
       <div id="about" className={`z-0 mt-48 ${theme === 'dark' ? 'dark' : ''} `}>
         <div className="flex flex-wrap justify-center lg:justify-between">
         <div className="lg:max-w-[60%]">
-        <p className="text-5xl  flex justify-start font-abeezee text-violet-500 dark:text-violet-600 h-20">{name}</p>
+        <p className="text-5xl  flex justify-start font-abeezee text-violet-500 dark:text-violet-600 h-20 mb-4">{name}</p>
 
         <p className="text-black dark:text-white text-justify mb-8"> 
           I am studing at Wrocław University of Science and Technology. My major is Intelligence Electronics. I started learning front-end technologies like 
@@ -60,7 +60,9 @@ function About() {
         </p>
         </div>
         <div className="w-fit h-fit lg:pl-10  ">
-        <img className="max-w-80 rounded-full   " src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/face.jpg" alt="Wiktor Mazepa" />
+        <img className="max-w-80 rounded-full" 
+        src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/face.jpg" 
+        alt="Wiktor Mazepa" />
         </div>
         </div>
       </div>
