@@ -50,7 +50,7 @@ function Skills() {
                   
 
                   <div key={education.id} className="mb-4">
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row justify-start">
                     <div className="border-r-4 max-w-30 text-center ">
                      <p className="mt-4 text-black dark:text-white font-medium mr-8 min-w-20">{education.date}</p>
                      </div>
@@ -76,13 +76,15 @@ function Skills() {
             
           </div>
           <h3 className="text-left mt-8 self-start text-2xl text-black dark:text-white mb-2  font-abeezee font-semibold">Certificates</h3>
-          <div className="flex flex-col">
-     
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8">
+                <div className="aspect-h-3 aspect-w-4 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-6 xl:aspect-w-8 rounded-[30px] ">
                 <img
                   alt="React"
                   src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/reactCertification.png"
-                  className="scale-[55%] rounded-[120px] "
+                  className=" "
                 />
+              
+              </div>
 
           </div>
         </div>
