@@ -4,15 +4,13 @@
 
 body.light {
   background-color: #ffffff;
-
 }
 
 body.dark {
   background-color: #171717;
-
 }
 
-@font-face{
+@font-face {
   font-family: "abeezee";
-  src: url('../Roboto-Regular.ttf');
+  src: url("../Roboto-Regular.ttf");
 }

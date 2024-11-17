@@ -1,48 +1,53 @@
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 
-
 function Contact() {
-
   function handleGithub() {
-    window.open("https://github.com/Tuni0")
+    window.open("https://github.com/Tuni0");
   }
 
   function handleLinkedIn() {
-    window.open("https://www.linkedin.com/in/wiktor-mazepa-812199338/")
+    window.open("https://www.linkedin.com/in/wiktor-mazepa-812199338/");
   }
-    return (
-      <div id="contact" className="flex-col pt-24">
-        <div className="mb-12">
-          <h1 className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold">Get in touch</h1>
-        </div>
-        {/*
+  return (
+    <div id="contact" className="flex-col pt-24">
+      <div className="mb-12">
+        <h1 className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold">
+          Get in touch
+        </h1>
+      </div>
+      {/*
         <div className="mb-8">
           <p className="text-1xl text-gray-900 dark:text-white ">+48 881 451 000</p>
         </div>
         */}
-        
-        <div className="mb-8">
-          <a href="mailto:wiktor.mazepa@gmail.com " className="text-1xl text-gray-900 dark:text-white ">wiktor.mazepa@gmail.com</a>
-        </div>
-        <div>
-         <button
-            type="button"
-            onClick={() => handleGithub()}
-            className="-m-2.5  p-2.5 text-gray-700 mr-4 "
-          >
-            <BsGithub className="text-4xl text-gray-900 dark:text-white" />
+
+      <div className="mb-8">
+        <a
+          href="mailto:wiktor.mazepa@gmail.com "
+          className="text-1xl text-gray-900 dark:text-white "
+        >
+          wiktor.mazepa@gmail.com
+        </a>
+      </div>
+      <div>
+        <button
+          type="button"
+          onClick={() => handleGithub()}
+          className="-m-2.5  p-2.5 text-gray-700 mr-4 "
+        >
+          <BsGithub className="text-4xl text-gray-900 dark:text-white" />
         </button>
         <button
-            type="button"
-            onClick={() => handleLinkedIn()}
-            className="-m-2.5  p-2.5 text-gray-700 "
-          >
-        <BsLinkedin className="text-4xl text-gray-900 dark:text-white" />
+          type="button"
+          onClick={() => handleLinkedIn()}
+          className="-m-2.5  p-2.5 text-gray-700 "
+        >
+          <BsLinkedin className="text-4xl text-gray-900 dark:text-white" />
         </button>
-        </div>
       </div>
-    );
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;
