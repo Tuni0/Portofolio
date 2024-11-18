@@ -27,10 +27,7 @@ function Skills() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div
-      id="skills"
-      className={`z-1 mt-24 ${theme === "dark" ? "dark" : ""}   `}
-    >
+    <div id="about" className={`z-1 mt-2 ${theme === "dark" ? "dark" : ""}  `}>
       <div className=" py-4 sm:py-8 lg:max-w-screen-xl">
         <h2 className="text-left self-start text-4xl text-violet-500 dark:text-violet-600 mb-8 mt-4 font-abeezee font-semibold">
           Skills and Experience

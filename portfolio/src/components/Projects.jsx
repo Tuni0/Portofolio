@@ -98,7 +98,7 @@ function Projects() {
   return (
     <div
       id="projects"
-      className={`z-0 mt-4 ${
+      className={`z-0 mt-4 pt-20 ${
         theme === "dark" ? "dark" : ""
       }  bg-white dark:bg-neutral-900`}
     >
