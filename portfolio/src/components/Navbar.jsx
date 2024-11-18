@@ -80,7 +80,7 @@ function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Home
             </motion.button>
@@ -89,7 +89,7 @@ function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               About
             </motion.button>
@@ -99,7 +99,7 @@ function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Projects
             </motion.button>
@@ -108,7 +108,7 @@ function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-200 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Contact
             </motion.button>
@@ -126,45 +126,60 @@ function Navbar() {
           <div className="fixed inset-0 z-10" />
           <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-zinc-900  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex  justify-end">
-              <button
+              <motion.button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 className="m-2 rounded-md p-2 text-gray-700 dark:text-white"
               >
                 <span className="sr-only">Close menu</span>
                 <XMarkIcon aria-hidden="true" className="size-6" />
-              </button>
+              </motion.button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  <button
+              <div className="-my-8 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6 px-6">
+                  <motion.button
                     onClick={handleHomeClick}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
                   >
                     Home
-                  </button>
-                  <button
+                  </motion.button>
+                  <motion.button
                     onClick={handleAboutClick}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
                   >
                     About
-                  </button>
+                  </motion.button>
 
-                  <button
+                  <motion.button
                     onClick={handleProjectsClick}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
                   >
                     Projects
-                  </button>
-                  <button
+                  </motion.button>
+                  <motion.button
                     onClick={handleContactClick}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     className="-mx-3 block w-full text-left rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
                   >
                     Contact
-                  </button>
+                  </motion.button>
                 </div>
-                <div className="py-6">
+                <div className="py-6 px-6">
                   <ThemeSwitcher />
                 </div>
               </div>
