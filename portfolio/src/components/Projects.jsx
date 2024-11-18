@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../App.jsx";
+import { motion } from "motion/react";
 
 const names = {
   javascript: "javascript",
@@ -99,53 +100,60 @@ function Projects() {
       id="projects"
       className={`z-0 mt-4 ${
         theme === "dark" ? "dark" : ""
-      }  bg-white dark:bg-neutral-900 `}
+      }  bg-white dark:bg-neutral-900`}
     >
       <div className="flex flex-col items-center py-2 sm:py-4 lg:max-w-screen-xl">
         <h2 className="text-left self-start text-4xl text-violet-500 dark:text-violet-600 mb-8 mt-4 font-abeezee font-semibold">
           Projects
         </h2>
 
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-[30px] bg-white dark:bg-neutral-800"
-            >
-              <a className="group">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-12 xl:aspect-w-10  rounded-[30px] hover:md:animate-bounce  ">
-                  <img
-                    alt={project.imageAlt}
-                    src={project.imageSrc}
-                    className="size-full object-cover object-center group-hover:opacity-75  "
-                  />
-                </div>
-                <h3 className="mt-4 text-lg font-medium text-gray-700 dark:text-white">
-                  {project.name}
-                </h3>
-                <p className="mt-1 mb-4 text-sm  text-gray-900 dark:text-white">
-                  {project.description}
-                </p>
-                {/*
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:gap-x-8 ">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="max-w-lg  overflow-hidden shadow-xl p-8 rounded-[30px] bg-white dark:bg-neutral-800"
+              >
+                <a className="group">
+                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 dark:bg-neutral-800 xl:aspect-h-12 xl:aspect-w-10  rounded-[30px] hover:md:animate-bounce  ">
+                    <img
+                      alt={project.imageAlt}
+                      src={project.imageSrc}
+                      className="size-full object-cover object-center group-hover:opacity-75  "
+                    />
+                  </div>
+                  <h3 className="mt-4 text-lg font-medium text-gray-700 dark:text-white">
+                    {project.name}
+                  </h3>
+                  <p className="mt-1 mb-4 text-sm  text-gray-900 dark:text-white">
+                    {project.description}
+                  </p>
+                  {/*
              jeśli tagi nie są puste i wyciągam z tablicy projektów wszystkie tagi, 
              !przyjmując ich wartość a nie klucz jako tag oraz index od 0 w górę,
              *w celu wpisania css do spana wystarczy posłużyć sie więc wartością tagu (tag), która jest kluczem do słownika colors
              */}
-                {project.tags &&
-                  project.tags.map((tag, index) => {
-                    return (
-                      <span
-                        key={index}
-                        className={`inline-flex items-center ${colors[tag]} mr-2`}
-                      >
-                        {tag}
-                      </span>
-                    );
-                  })}
-              </a>
-            </div>
-          ))}
-        </div>
+                  {project.tags &&
+                    project.tags.map((tag, index) => {
+                      return (
+                        <span
+                          key={index}
+                          className={`inline-flex items-center ${colors[tag]} mr-2`}
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
+                </a>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

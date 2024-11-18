@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { ThemeContext } from "../App.jsx";
+import { motion } from "motion/react";
 
 const educations = [
   {
@@ -35,7 +36,13 @@ function Skills() {
           Skills and Experience
         </h2>
 
-        <div className="flex flex-col  gap-x-6 gap-y-10 max-w-full">
+        <motion.div
+          className="flex flex-col  gap-x-6 gap-y-10 max-w-full"
+          initial={{ x: 300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3, once: true }}
+          viewport={{ once: true }}
+        >
           <div className="">
             {educations.map((education) => (
               <div key={education.id} className="mb-4">
@@ -62,11 +69,17 @@ function Skills() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
         <h3 className="text-left mt-8 self-start text-2xl text-black dark:text-white mb-2  font-abeezee font-semibold">
           Certificates
         </h3>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 ">
+        <motion.div
+          className="grid grid-cols-1 gap-x-6 gap-y-10 "
+          initial={{ x: -300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
           <div className="w-fit h-fit  max-w-screen-md ">
             <img
               alt="React"
@@ -74,7 +87,7 @@ function Skills() {
               className="  rounded-[30px] "
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

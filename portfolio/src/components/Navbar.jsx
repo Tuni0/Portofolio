@@ -10,6 +10,7 @@ import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import ThemeSwitcher from "./ThemeSwitcher.jsx";
 import { ThemeContext } from "../App.jsx";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -74,31 +75,43 @@ function Navbar() {
             </button>
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-x-16">
-            <button
+            <motion.button
               onClick={handleHomeClick}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
               className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Home
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={handleAboutClick}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
               className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               About
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
               onClick={handleProjectsClick}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Projects
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={handleContactClick}
-              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-zinc-800 font-abeezee "
             >
               Contact
-            </button>
+            </motion.button>
           </PopoverGroup>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">

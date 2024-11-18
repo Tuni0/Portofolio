@@ -1,5 +1,6 @@
 import { BsGithub } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+import { easeIn, motion } from "framer-motion";
 
 function Contact() {
   function handleGithub() {
@@ -12,9 +13,17 @@ function Contact() {
   return (
     <div id="contact" className="flex-col pt-24">
       <div className="mb-12">
-        <h1 className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold">
+        <motion.h1
+          className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold"
+          animate={{ opacity: [1, 0, 1] }}
+          transition={{
+            ease: "easeInOut",
+            repeat: Infinity,
+            duration: 3,
+          }}
+        >
           Get in touch
-        </h1>
+        </motion.h1>
       </div>
       {/*
         <div className="mb-8">

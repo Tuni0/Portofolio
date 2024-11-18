@@ -6,6 +6,7 @@ import React, {
   useRef,
 } from "react";
 import { ThemeContext } from "../App";
+import { motion } from "framer-motion";
 
 function About() {
   const { theme } = useContext(ThemeContext);
@@ -50,7 +51,12 @@ function About() {
             {name}
           </p>
 
-          <p className="text-black dark:text-white text-justify mb-8">
+          <motion.p
+            className="text-black dark:text-white text-justify mb-8"
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
             I am studing at Wrocław University of Science and Technology. My
             major is Intelligence Electronics. I started learning front-end
             technologies like HTML, CSS, JavaScript, React, and Tailwind CSS. I
@@ -59,11 +65,14 @@ function About() {
             studing I learn a bit of Python, VHDL, Verilog, C#. In one of my
             projects, I was a participiant in building .NET WebAssembly
             application with Razor Pages and MudBlazor components.
-          </p>
+          </motion.p>
         </div>
         <div className="w-fit h-fit lg:pl-10  ">
-          <img
+          <motion.img
             className="max-w-80 rounded-full"
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/face.jpg"
             alt="Wiktor Mazepa"
           />
