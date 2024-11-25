@@ -71,7 +71,7 @@ function Skills() {
           Certificates
         </h3>
         <motion.div
-          className="grid grid-cols-1 gap-x-6 gap-y-10 "
+          className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-10 "
           initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
