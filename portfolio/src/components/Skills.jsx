@@ -84,6 +84,30 @@ function Skills() {
               className="  rounded-[30px] "
             />
           </div>
+
+          <div className="w-fit h-fit  max-w-screen-md ">
+            <img
+              alt="JavaScript"
+              src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/js.png"
+              className="  rounded-[30px] "
+            />
+          </div>
+
+          <div className="w-fit h-fit  max-w-screen-md ">
+            <img
+              alt="HTML"
+              src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/html.png"
+              className="  rounded-[30px] "
+            />
+          </div>
+
+          <div className="w-fit h-fit  max-w-screen-md ">
+            <img
+              alt="CSS"
+              src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/css.png"
+              className="  rounded-[30px] "
+            />
+          </div>
         </motion.div>
       </div>
     </div>
