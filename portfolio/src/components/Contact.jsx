@@ -12,9 +12,9 @@ function Contact() {
   }
   return (
     <div id="contact" className="flex-col pt-24">
-      <div className="w-fit h-fit lg:pl-10  ">
+      <div className="flex flex-wrap justify-center mb-10">
         <motion.img
-          className="max-w-80 rounded-full"
+          className="max-w-60 rounded-s-2xl justify-center"
           initial={{ x: 200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
