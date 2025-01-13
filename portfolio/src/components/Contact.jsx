@@ -12,6 +12,16 @@ function Contact() {
   }
   return (
     <div id="contact" className="flex-col pt-24">
+      <div className="w-fit h-fit lg:pl-10  ">
+        <motion.img
+          className="max-w-80 rounded-full"
+          initial={{ x: 200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/mmdeol.png"
+          alt="Wiktor Mazepa"
+        />
+      </div>
       <div className="mb-12">
         <motion.h1
           className="text-4xl text-violet-500 dark:text-violet-600 mb-4 font-abeezee font-semibold"
