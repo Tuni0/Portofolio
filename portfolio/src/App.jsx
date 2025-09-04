@@ -6,6 +6,7 @@ import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Skills from "./components/Skills.jsx";
 import "./App.css";
+import GlowingBlob from "./components/GlowingBlob.jsx";
 
 export const ThemeContext = createContext();
 
@@ -28,6 +29,7 @@ function App() {
         <Skills />
         <Projects />
         <Contact />
+        <GlowingBlob />
       </div>
     </ThemeContext.Provider>
   );

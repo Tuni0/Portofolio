@@ -6,7 +6,17 @@ import { motion } from "motion/react";
 const educations = [
   {
     id: 1,
-    name: "Wrocław University of Science and Technology. Major: Intelligent Electronics.",
+    name: "Wrocław University of Science and Technology. Major: Applied Computer Science (M.Sc.).",
+    description: [
+      "Mobile applications - Android Studio, Material Design, multimedia",
+      "Web and IoT security",
+      "Algorithms and IT systems optimization",
+    ],
+    date: "June 2025 - Present",
+  },
+  {
+    id: 2,
+    name: "Wrocław University of Science and Technology. Major: Intelligent Electronics (B.Eng.).",
     description: [
       "Basic programming skills in C/C++, C#, JavaScript, Python",
       "Basic knowledge of measurements of various electrical and non-electrical quantities and determination of their uncertainties",
@@ -19,7 +29,7 @@ const educations = [
       "learning the processes of design, manufacturing and operation of MEMS devices",
       "programming logic structures (Vivado, Verilog, VHDL), embedded processors (STM32 IDE), and AVR microcontrollers (Microchip Studio, Eclipse)",
     ],
-    date: "2021-now",
+    date: "September 2021 - February 2025",
   },
 ];
 
@@ -43,8 +53,8 @@ function Skills() {
           <div className="">
             {educations.map((education) => (
               <div key={education.id} className="mb-4">
-                <div className="flex flex-row justify-start">
-                  <div className="border-r-4 max-w-30 text-center ">
+                <div className="grid grid-cols-[300px_1fr] gap-6">
+                  <div className="border-r-4 max-w-30 text-start">
                     <p className="mt-4 text-black dark:text-white font-medium mr-8 min-w-20">
                       {education.date}
                     </p>

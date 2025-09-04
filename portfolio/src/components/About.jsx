@@ -58,13 +58,16 @@ function About() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             I am studing at Wrocław University of Science and Technology. My
-            major is Intelligence Electronics. I started learning front-end
-            technologies like HTML, CSS, JavaScript, React, and Tailwind CSS. I
-            am looking for an internship to gain experience in the field of web
-            development. My goal is to become a full-stack developer. While
-            studing I learn a bit of Python, VHDL, Verilog, C#. In one of my
-            projects, I was a participiant in building .NET WebAssembly
-            application with Razor Pages and MudBlazor components.
+            major is Applied Computer Science. I started learning front-end
+            technologies like HTML, CSS, JavaScript, React, and Tailwind CSS.
+            Moreover, I gain experience in working with databases like MySQL,
+            MsSQL, PostgreSQL. I am looking for an internship to gain experience
+            in the field of web development. My goal is to become a full-stack
+            developer. While studying I learn a bit of Python, VHDL, Verilog,
+            C#. In one of my projects, I was a participant in building .NET
+            WebAssembly application with Razor Pages and MudBlazor components. I
+            am also interested in AI and machine learning technologies and
+            wanted to learn more about them.
           </motion.p>
         </div>
         <div className="w-fit h-fit lg:pl-10  ">

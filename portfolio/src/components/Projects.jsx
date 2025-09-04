@@ -98,9 +98,7 @@ function Projects() {
   return (
     <div
       id="projects"
-      className={`z-0 mt-4 pt-20 ${
-        theme === "dark" ? "dark" : ""
-      }  bg-white dark:bg-neutral-900`}
+      className={`z-0 mt-4 pt-20 ${theme === "dark" ? "dark" : ""}  `}
     >
       <div className="flex flex-col items-center py-2 sm:py-4 lg:max-w-screen-xl">
         <h2 className="text-left self-start text-4xl text-violet-500 dark:text-violet-600 mb-8 mt-4 font-abeezee font-semibold">
