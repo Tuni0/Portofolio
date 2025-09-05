@@ -88,6 +88,17 @@ const projects = [
     imageAlt:
       "Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.",
   },
+  {
+    id: 4,
+    name: "Android Crypto Wallet",
+    description:
+      "Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.",
+    tags: [names.kotlin, names.firebase, names.xml],
+    imageSrc:
+      "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/android.png",
+    imageAlt:
+      "Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.",
+  },
 
   // More projects...
 ];
