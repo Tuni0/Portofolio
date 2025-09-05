@@ -24,12 +24,14 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="min-h-screen">
+        <div className="fixed inset-0 flex items-center justify-center -z-10">
+          <GlowingBlob />
+        </div>
         <Navbar />
         <About />
         <Skills />
         <Projects />
         <Contact />
-        <GlowingBlob />
       </div>
     </ThemeContext.Provider>
   );

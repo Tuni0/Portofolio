@@ -53,24 +53,26 @@ function Skills() {
           <div className="">
             {educations.map((education) => (
               <div key={education.id} className="mb-4">
-                <div className="grid grid-cols-[300px_1fr] gap-6">
-                  <div className="border-r-4 max-w-30 text-start">
-                    <p className="mt-4 text-black dark:text-white font-medium mr-8 min-w-20">
+                <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4 sm:gap-6">
+                  {/* Lewa kolumna z datą */}
+                  <div className="sm:border-r-4 text-start">
+                    <p className="mt-2 sm:mt-4 text-black dark:text-white font-medium sm:mr-8">
                       {education.date}
                     </p>
                   </div>
 
-                  <a className="group ml-10">
-                    <h3 className="text-lg font-medium text-gray-700 dark:text-white text-left">
+                  {/* Prawa kolumna z treścią */}
+                  <a className="group sm:ml-6">
+                    <h3 className="text-base sm:text-lg font-medium text-gray-700 dark:text-white text-left">
                       {education.name}
                     </h3>
-                    <p className="mt-1 text-sm text-gray-900 dark:text-white">
+                    <ul className="mt-1 text-sm text-gray-900 dark:text-white list-disc pl-5">
                       {education.description.map((desc, index) => (
-                        <li key={index} className="list-disc text-left">
+                        <li key={index} className="text-left">
                           {desc}
                         </li>
                       ))}
-                    </p>
+                    </ul>
                   </a>
                 </div>
               </div>
@@ -81,7 +83,7 @@ function Skills() {
           Certificates
         </h3>
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-10 "
+          className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6"
           initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
