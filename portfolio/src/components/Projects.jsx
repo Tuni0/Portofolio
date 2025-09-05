@@ -24,6 +24,7 @@ const names = {
   xml: "XML",
   yaml: "YAML",
   firebase: "Firebase",
+  chatGPT: "ChatGPT help",
 };
 
 const colors = {
@@ -53,6 +54,8 @@ const colors = {
   yaml: "yaml",
   Firebase:
     "rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-500 ring-1 ring-inset ring-red-600/20 dark:bg-red-400/10 dark:text-red-500 dark:ring-red-400/20",
+  "ChatGPT help":
+    "rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-500 ring-1 ring-inset ring-blue-600/20 dark:bg-blue-400/10 dark:text-blue-500 dark:ring-blue-400/20",
 };
 
 const projects = [
@@ -68,14 +71,14 @@ const projects = [
   },
   {
     id: 2,
-    name: "Calculator",
+    name: "Android Crypto Wallet",
     description:
-      "Simple calculator windows app with trigonometry functions plots.",
-    tags: [names.csharp],
+      "Make android crypto wallet in Kotlin with Jetpack Compose, Firebase to store users and wallets and backend API to manage Monero wallets.",
+    tags: [names.kotlin, names.firebase, names.xml, names.chatGPT],
     imageSrc:
-      "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/calc.jpg",
+      "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/android.png",
     imageAlt:
-      "Simple calculator windows app with trigonometry functions plots.",
+      "Make android crypto wallet in Kotlin with Jetpack Compose, Firebase to store users and wallets and backend API to manage Monero wallets.",
   },
   {
     id: 3,
@@ -90,14 +93,14 @@ const projects = [
   },
   {
     id: 4,
-    name: "Android Crypto Wallet",
+    name: "Calculator",
     description:
-      "Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.",
-    tags: [names.kotlin, names.firebase, names.xml],
+      "Simple calculator windows app with trigonometry functions plots.",
+    tags: [names.csharp],
     imageSrc:
-      "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/android.png",
+      "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/calc.jpg",
     imageAlt:
-      "Make to-do list aplication in Kotlin with Firebase to store the new and deleted tasks.",
+      "Simple calculator windows app with trigonometry functions plots.",
   },
 
   // More projects...
