@@ -56,7 +56,7 @@ function Skills() {
   };
 
   const certs = [
-    { title: "DevOps", src: "./src/assets/devops_certification.jpg" },
+    { title: "DevOps", src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/devops_certification.jpg" },
     { title: "React", src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/reactCertification.png" },
     { title: "JavaScript", src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/js.png" },
     { title: "HTML", src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/html.png" },

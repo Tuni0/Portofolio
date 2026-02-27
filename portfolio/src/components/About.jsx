@@ -100,7 +100,15 @@ function About() {
         >
           <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
           <img
-            className="relative w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+            className="relative object-cover rounded-full border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+            style={{
+              imageRendering: "high-quality",
+              WebkitFontSmoothing: "antialiased",
+              transform: "translateZ(0)",
+              backfaceVisibility: "hidden"
+            }}
+            width={800}
+            height={800}
             src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/face.jpg"
             alt="Wiktor Mazepa"
           />
