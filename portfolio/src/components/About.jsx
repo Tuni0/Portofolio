@@ -91,16 +91,23 @@ function About() {
             </a>
           </motion.div>
         </div>
-
         <motion.div
-          className="relative group"
+          // mx-auto centruje na mobile, lg:mx-0 przywraca wyrównanie do prawej w rzędzie
+          // Zwiększone wymiary: 
+          // Mobile (wcześniej 160px): teraz 240px
+          // Tablet/Średni (sm): 380px
+          // Duży (lg): 480px (zwiększony względem Twoich 380px)
+          className="relative group w-[240px] h-[320px] sm:w-[380px] sm:h-[480px] lg:w-[430px] lg:h-[550px] shrink-0 mx-auto lg:mx-0"
           initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2, type: "spring" }}
         >
-          <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+          {/* Tło (Glow) */}
+          <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-[240px] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+
           <img
-            className="relative object-cover rounded-full border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+            // rounded-[240px] dla pewności, że przy większej szerokości łuki będą pełne
+            className="relative w-full h-full object-cover rounded-[240px] border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             style={{
               imageRendering: "high-quality",
               WebkitFontSmoothing: "antialiased",
