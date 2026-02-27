@@ -44,18 +44,25 @@ function About() {
   }, [change]);
 
   return (
-    <div id="about" className={`z-0 mt-48 ${theme === "dark" ? "dark" : ""} `}>
-      <div className="flex flex-wrap justify-center lg:justify-between">
-        <div className="lg:max-w-[60%]">
-          <p className="text-5xl  flex justify-start font-abeezee text-violet-500 dark:text-violet-600 h-20 mb-8">
-            {name}
-          </p>
+    <div id="about" className={`z-0 mt-32 sm:mt-48 ${theme === "dark" ? "dark" : ""} `}>
+      <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-12">
+        <div className="lg:max-w-[60%] w-full flex flex-col items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full text-left"
+          >
+            <h1 className="text-5xl sm:text-7xl font-abeezee font-bold text-violet-500 dark:text-violet-600 mb-8 h-20 sm:h-24 text-left">
+              {name}
+            </h1>
+          </motion.div>
 
           <motion.p
-            className="text-black dark:text-white text-justify mb-8"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-justify mb-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             I am studing at Wrocław University of Science and Technology. My
             major is Applied Computer Science. I started learning front-end
@@ -69,17 +76,35 @@ function About() {
             am also interested in AI and machine learning technologies and
             wanted to learn more about them.
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="flex gap-4"
+          >
+            <a href="#projects" className="px-8 py-3 bg-violet-500 hover:bg-violet-600 text-white rounded-full font-bold transition-all duration-300 shadow-lg shadow-violet-500/30">
+              View Work
+            </a>
+            <a href="#contact" className="px-8 py-3 border-2 border-violet-500 text-violet-500 hover:bg-violet-500 hover:text-white rounded-full font-bold transition-all duration-300">
+              Contact Me
+            </a>
+          </motion.div>
         </div>
-        <div className="w-fit h-fit lg:pl-10  ">
-          <motion.img
-            className="max-w-80 rounded-full"
-            initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+
+        <motion.div
+          className="relative group"
+          initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.2, type: "spring" }}
+        >
+          <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+          <img
+            className="relative w-64 h-64 sm:w-80 sm:h-80 object-cover rounded-full border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             src="https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/face.jpg"
             alt="Wiktor Mazepa"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

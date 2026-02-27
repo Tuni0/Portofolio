@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
@@ -7,6 +7,7 @@ import Contact from "./components/Contact.jsx";
 import Skills from "./components/Skills.jsx";
 import "./App.css";
 import GlowingBlob from "./components/GlowingBlob.jsx";
+import ScrollProgress from "./components/ui/ScrollProgress.jsx";
 
 export const ThemeContext = createContext();
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <ScrollProgress />
       <div className="min-h-screen">
         <div className="fixed inset-0 flex items-center justify-center -z-10">
           <GlowingBlob />

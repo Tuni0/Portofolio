@@ -14,3 +14,25 @@ body.dark {
   font-family: "abeezee";
   src: url("../Roboto-Regular.ttf");
 }
+
+/* Modern Scrollbar */
+.modern-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.modern-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.modern-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
+  background-clip: content-box;
+}
