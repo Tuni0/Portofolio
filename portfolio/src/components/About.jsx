@@ -102,14 +102,13 @@ function About() {
           <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-[240px] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
 
           <img
-            className="relative w-full h-full object-contain rounded-[240px] border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+            className="relative w-full h-full object-cover rounded-[240px] border-4 border-white dark:border-neutral-800 shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
             style={{
+              WebkitImageRendering: "-webkit-optimize-contrast",
+              imageRendering: "smooth",
               WebkitFontSmoothing: "antialiased",
-              MozOsxFontSmoothing: "grayscale",
               transform: "translateZ(0)",
               backfaceVisibility: "hidden",
-              willChange: "transform",
-              outline: "1px solid transparent",
             }}
             width={800}
             height={800}

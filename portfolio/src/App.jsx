@@ -12,14 +12,29 @@ import ScrollProgress from "./components/ui/ScrollProgress.jsx";
 export const ThemeContext = createContext();
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => {
+    // Check system preference on initial load
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  });
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
   useEffect(() => {
+    // Update theme when system preference changes
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e) => {
+      setTheme(e.matches ? "dark" : "light");
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
     document.body.className = theme; // Apply theme to the body
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, [theme]);
 
   return (
