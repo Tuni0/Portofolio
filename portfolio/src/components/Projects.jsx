@@ -249,7 +249,7 @@ const projects = [
     },
     gallery: [
       {
-        src: "srchttps://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/ecommerce2.jpg",
+        src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/ecommerce2.jpg",
       },
       {
         src: "https://raw.githubusercontent.com/Tuni0/Portofolio/refs/heads/main/portfolio/src/assets/ecommerce3.jpg",
@@ -260,9 +260,8 @@ const projects = [
     ],
     links: {
       demo: null,
-      repo: null,
-      codeAccessNote:
-        "Academic research project; code and full architecture details available on request.",
+      repo: "https://github.com/Tuni0/E-commerce-ai",
+      codeAccessNote: "Academic research project.",
     },
     tags: [names.react, names.sql, names.integratedAgent],
   },
