@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* shadcn-style color variables using portfolio violet as accent */
+:root {
+  --primary: #8b5cf6; /* violet-500 */
+  --primary-foreground: #020617; /* near-black */
+  --accent: #7c3aed; /* violet-600 */
+  --accent-foreground: #f9fafb; /* very light gray */
+  --card: #ffffff; /* light card */
+  --card-foreground: #020617;
+}
+
+.dark {
+  --primary: #a855f7;
+  --primary-foreground: #020617;
+  --accent: #a855f7;
+  --accent-foreground: #f9fafb;
+  --card: #050505; /* almost black, neutral */
+  --card-foreground: #e5e7eb; /* light gray */
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-primary-foreground {
+  color: var(--primary-foreground);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-accent-foreground {
+  color: var(--accent-foreground);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+.text-card-foreground {
+  color: var(--card-foreground);
+}
+
 body.light {
   background-color: #ffffff;
 }

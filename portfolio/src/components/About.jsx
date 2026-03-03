@@ -7,6 +7,7 @@ import React, {
 } from "react";
 import { ThemeContext } from "../App";
 import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 function About() {
   const { theme } = useContext(ThemeContext);
@@ -44,7 +45,10 @@ function About() {
   }, [change]);
 
   return (
-    <div id="about" className={`z-0 mt-32 sm:mt-48 ${theme === "dark" ? "dark" : ""} `}>
+    <div
+      id="about"
+      className={`z-0 mt-32 sm:mt-48 ${theme === "dark" ? "dark" : ""} `}
+    >
       <div className="flex flex-col-reverse lg:flex-row items-start justify-between gap-12">
         <div className="lg:max-w-[60%] w-full flex flex-col items-start">
           <motion.div
@@ -83,22 +87,24 @@ function About() {
             transition={{ delay: 1, duration: 1 }}
             className="flex gap-4"
           >
-            <a href="#projects" className="px-8 py-3 bg-violet-500 hover:bg-violet-600 text-white rounded-full font-bold transition-all duration-300 shadow-lg shadow-violet-500/30">
+            <Button
+              as="a"
+              href="#projects"
+              className="shadow-lg shadow-violet-500/30"
+            >
               View Work
-            </a>
-            <a href="#contact" className="px-8 py-3 border-2 border-violet-500 text-violet-500 hover:bg-violet-500 hover:text-white rounded-full font-bold transition-all duration-300">
+            </Button>
+            <Button as="a" href="#contact" variant="outline">
               Contact Me
-            </a>
+            </Button>
           </motion.div>
         </div>
         <motion.div
-
           className="relative group w-[240px] h-[320px] sm:w-[380px] sm:h-[480px] lg:w-[400px] lg:h-[530px] shrink-0 mx-auto lg:mx-0"
           initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2, type: "spring" }}
         >
-
           <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500 to-indigo-500 rounded-[240px] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
 
           <img

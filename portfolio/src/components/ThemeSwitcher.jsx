@@ -3,6 +3,7 @@ import { ThemeContext } from "../App.jsx";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { BsSunFill } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { MoonIcon, SunIcon } from "lucide-react";
 
 function ThemeSwitcher() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -17,9 +18,9 @@ function ThemeSwitcher() {
         className="-m-2 rounded-md p-2 text-gray-700"
       >
         {theme === "light" ? (
-          <BsFillMoonStarsFill aria-hidden="true" className="size-6" />
+          <MoonIcon aria-hidden="true" className="size-6" />
         ) : (
-          <BsSunFill aria-hidden="true" className="size-6 text-yellow-100" />
+          <SunIcon aria-hidden="true" className="size-6 text-yellow-300" />
         )}
       </motion.button>
     </div>
