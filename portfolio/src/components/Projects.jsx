@@ -24,6 +24,13 @@ import { TbBinaryTree } from "react-icons/tb";
 import { LuCpu, LuBrain, LuFileCode } from "react-icons/lu";
 import { VscVscode } from "react-icons/vsc";
 import { ArrowLeftIcon, ArrowRightIcon, XIcon } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const names = {
   javascript: "javascript",
@@ -595,7 +602,7 @@ function ProjectCard({ project, onOpen }) {
       whileHover={{ y: -10, scale: 1.02 }}
       transition={{ type: "spring", stiffness: 220, damping: 18 }}
       onClick={() => onOpen(project)}
-      className="group relative flex h-full flex-col flex-none w-[280px] sm:w-[350px] overflow-hidden bg-white/15 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/30 dark:border-neutral-800/60 rounded-[50px] shadow-xl transition-all duration-500 snap-center hover:shadow-violet-500/25 cursor-pointer text-left"
+      className="group relative flex h-full flex-col flex-none overflow-hidden bg-white/15 dark:bg-neutral-900/40 backdrop-blur-xl border border-white/30 dark:border-neutral-800/60 rounded-[50px] shadow-xl transition-all duration-500 snap-center hover:shadow-violet-500/25 cursor-pointer text-left"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-[50px]">
         <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black dark:from-black dark:via-neutral-950 dark:to-black" />
@@ -965,7 +972,7 @@ function Projects() {
       id="projects"
       className={`z-0 mt-4 pt-20 ${theme === "dark" ? "dark" : ""}`}
     >
-      <div className="mx-auto flex w-full flex-col items-start px-4 py-2 sm:py-4 lg:max-w-screen-xl">
+      <div className="mx-auto flex w-full flex-col items-start px-4 py-4 sm:py-6 lg:max-w-screen-xl">
         <div className="mb-6 flex w-full flex-col gap-2 sm:mb-10 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="mb-2 mt-4 self-start text-start font-abeezee text-3xl font-semibold text-violet-500 dark:text-violet-600 sm:text-4xl">
@@ -978,25 +985,44 @@ function Projects() {
           </div>
         </div>
 
-        <div className="relative w-full">
-          <motion.div
-            className="modern-scrollbar flex w-full snap-x snap-mandatory gap-4 overflow-x-auto pb-10 pt-4 sm:gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
-                variants={cardVariants}
-                className="snap-center"
-              >
-                <ProjectCard project={project} onOpen={setSelectedProject} />
-              </motion.div>
-            ))}
-            <div className="flex-none w-[12px]" />
-          </motion.div>
+        <div className="relative w-full pb-12 pt-4 sm:pb-14 sm:pt-6">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <div className="flex items-center gap-2">
+              <CarouselPrevious className="hidden sm:flex shrink-0" />
+
+              <div className="flex-1 overflow-hidden">
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-80px" }}
+                >
+                  <CarouselContent>
+                    {projects.map((project) => (
+                      <CarouselItem
+                        key={project.id}
+                        className="basis-[85%] sm:basis-1/2 lg:basis-1/3"
+                      >
+                        <div className="h-full p-3 sm:p-4">
+                          <motion.div
+                            variants={cardVariants}
+                            className="h-full"
+                          >
+                            <ProjectCard
+                              project={project}
+                              onOpen={setSelectedProject}
+                            />
+                          </motion.div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </motion.div>
+              </div>
+
+              <CarouselNext className="hidden sm:flex shrink-0" />
+            </div>
+          </Carousel>
         </div>
       </div>
 
