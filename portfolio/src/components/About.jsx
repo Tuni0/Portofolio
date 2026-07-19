@@ -68,17 +68,7 @@ function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            I am studing at Wrocław University of Science and Technology. My
-            major is Applied Computer Science. I started learning front-end
-            technologies like HTML, CSS, JavaScript, React, and Tailwind CSS.
-            Moreover, I gain experience in working with databases like MySQL,
-            MsSQL, PostgreSQL. I am looking for an internship to gain experience
-            in the field of web development. My goal is to become a full-stack
-            developer. While studying I learn a bit of Python, VHDL, Verilog,
-            C#. In one of my projects, I was a participant in building .NET
-            WebAssembly application with Razor Pages and MudBlazor components. I
-            am also interested in AI and machine learning technologies and
-            wanted to learn more about them.
+            I am a graduate of Applied Computer Science (M.Sc.) at Wrocław University of Science and Technology. Currently, I work as a Junior Data Analyst, where I apply my skills in databases and data processing to support business decision-making, building ETL pipelines, and developing API integrations and automation between different applications. Alongside my professional role, I continue developing as a full-stack developer, working with front-end technologies like HTML, CSS, JavaScript, React, and Tailwind CSS. During my studies, I gained experience in Python, VHDL, Verilog, and C#, and contributed to a project building a .NET WebAssembly application with Razor Pages and MudBlazor components. I am also deeply interested in AI and machine learning, and I aim to combine these interests with my full-stack and data analytics expertise to build intelligent, data-driven web applications.
           </motion.p>
 
           <motion.div

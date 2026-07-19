@@ -1,0 +1,22 @@
+# Nie kopiujemy do kontekstu builda - lzejszy i szybszy obraz
+node_modules
+dist
+dist-ssr
+
+# Git / CI
+.git
+.gitignore
+.github
+
+# Env / secrets
+.env
+.env.*
+
+# Logi
+*.log
+npm-debug.log*
+
+# Edytor / OS
+.vscode
+.idea
+.DS_Store
