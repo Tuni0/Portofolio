@@ -7,11 +7,17 @@ const educations = [
     id: 1,
     name: "Wrocław University of Science and Technology. Major: Applied Computer Science (M.Sc.).",
     description: [
+      "Specialization: Applications of Specialized IT Technologies",
+      "Design, optimization, implementation and evaluation of IT systems - multimedia, web, mobile, embedded and IoT",
+      "Building embedded intelligence systems and interactive environments, including user experience (UX) modeling",
+      "Modeling of computerized processes, stream data processing and data mining",
+      "Modeling, analysis and optimization of IT systems and networks",
       "Mobile applications - Android Studio, Material Design, multimedia",
       "Web and IoT security",
       "Algorithms and IT systems optimization",
+      "Career paths: IT specialist maintaining and developing software supporting business operations, software designer, tester, systems administrator, and IT specialist designing, deploying and maintaining computer systems and networks",
     ],
-    date: "June 2025 - Present",
+    date: "June 2025 - June 2027",
   },
   {
     id: 2,
@@ -32,9 +38,49 @@ const educations = [
   },
 ];
 
+const iconBase =
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
+
+const technologies = [
+  { name: "JavaScript", icon: `${iconBase}/javascript/javascript-original.svg` },
+  { name: "TypeScript", icon: `${iconBase}/typescript/typescript-original.svg` },
+  { name: "React", icon: `${iconBase}/react/react-original.svg` },
+  { name: "Tailwind CSS", icon: `${iconBase}/tailwindcss/tailwindcss-original.svg` },
+  { name: "HTML5", icon: `${iconBase}/html5/html5-original.svg` },
+  { name: "CSS3", icon: `${iconBase}/css3/css3-original.svg` },
+  { name: "Node.js", icon: `${iconBase}/nodejs/nodejs-original.svg` },
+  { name: "C#", icon: `${iconBase}/csharp/csharp-original.svg` },
+  { name: ".NET", icon: `${iconBase}/dotnetcore/dotnetcore-original.svg` },
+  { name: "Python", icon: `${iconBase}/python/python-original.svg` },
+  { name: "C++", icon: `${iconBase}/cplusplus/cplusplus-original.svg` },
+  { name: "C", icon: `${iconBase}/c/c-original.svg` },
+  { name: "MySQL", icon: `${iconBase}/mysql/mysql-original.svg` },
+  { name: "PostgreSQL", icon: `${iconBase}/postgresql/postgresql-original.svg` },
+  { name: "MS SQL Server", icon: `${iconBase}/microsoftsqlserver/microsoftsqlserver-plain.svg` },
+  { name: "Git", icon: `${iconBase}/git/git-original.svg` },
+];
+
+const defaultSelectedTech = [
+  "JavaScript",
+  "React",
+  "Tailwind CSS",
+  "C#",
+  ".NET",
+  "Python",
+];
+
 function Skills() {
   const { theme } = useContext(ThemeContext);
   const [selectedCert, setSelectedCert] = useState(null);
+  const [selectedTech, setSelectedTech] = useState(defaultSelectedTech);
+
+  const toggleTech = (name) => {
+    setSelectedTech((prev) =>
+      prev.includes(name)
+        ? prev.filter((t) => t !== name)
+        : [...prev, name]
+    );
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -126,6 +172,79 @@ function Skills() {
             ))}
           </motion.div>
         </div>
+
+        {/* Tech Stack Section */}
+        <h3 className="text-left mt-24 self-start text-3xl text-violet-500 dark:text-violet-600 mb-3 font-abeezee font-semibold">
+          Languages & Frameworks
+        </h3>
+        <p className="text-left text-gray-600 dark:text-gray-400 mb-10 text-sm sm:text-base">
+          Technologies I use in my projects — tap to pick the ones I feel most comfortable with.
+        </p>
+
+        <motion.div
+          className="bg-white/40 dark:bg-neutral-800/20 backdrop-blur-md p-6 sm:p-8 rounded-[32px] border border-violet-100/50 dark:border-white/5 shadow-sm"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="flex flex-wrap gap-3">
+            {technologies.map((tech) => {
+              const isSelected = selectedTech.includes(tech.name);
+              return (
+                <motion.button
+                  key={tech.name}
+                  type="button"
+                  onClick={() => toggleTech(tech.name)}
+                  variants={itemVariants}
+                  whileHover={{ y: -3 }}
+                  whileTap={{ scale: 0.96 }}
+                  aria-pressed={isSelected}
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 ${
+                    isSelected
+                      ? "bg-violet-500/10 border-violet-500 text-violet-600 dark:text-violet-400 shadow-[0_0_15px_rgba(139,92,246,0.35)]"
+                      : "bg-white/50 dark:bg-neutral-900/40 border-violet-100/60 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:border-violet-400"
+                  }`}
+                >
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className={`w-5 h-5 transition-all duration-300 ${
+                      isSelected ? "" : "grayscale opacity-70"
+                    }`}
+                    loading="lazy"
+                  />
+                  {tech.name}
+                  {isSelected && (
+                    <span className="ml-0.5 text-violet-500 text-base leading-none">✓</span>
+                  )}
+                </motion.button>
+              );
+            })}
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-violet-100/50 dark:border-white/5 text-left">
+            <p className="text-xs uppercase tracking-widest text-violet-500 dark:text-violet-400 font-bold mb-3">
+              My picks ({selectedTech.length})
+            </p>
+            {selectedTech.length > 0 ? (
+              <div className="flex flex-wrap gap-2">
+                {selectedTech.map((name) => (
+                  <span
+                    key={name}
+                    className="px-3 py-1 rounded-full bg-violet-500 text-white text-xs font-medium shadow-sm"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                Nothing selected yet.
+              </p>
+            )}
+          </div>
+        </motion.div>
 
         {/* Certificates Section */}
         <h3 className="text-left mt-24 self-start text-3xl text-violet-500 dark:text-violet-600 mb-12 font-abeezee font-semibold">

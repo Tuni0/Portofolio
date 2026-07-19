@@ -1,0 +1,19 @@
+# Na VPS: `docker compose pull && docker compose up -d`.
+# Obraz buduje i wypycha na GHCR GitHub Actions (.github/workflows/deploy.yml),
+# dlatego uzywamy `image:` zamiast `build:` - VPS tylko pobiera gotowy obraz.
+services:
+  portfolio:
+    image: ghcr.io/tuni0/portofolio:latest
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`portfolio.tunio.cloud`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=le"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
