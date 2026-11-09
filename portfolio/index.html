@@ -2,12 +2,74 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+
+    <title>Wiktor Mazepa – Full-stack Developer &amp; Data Analyst</title>
+    <meta
+      name="description"
+      content="Portfolio of Wiktor Mazepa – M.Sc. Eng. in Applied Computer Science (Wrocław University of Science and Technology), Junior Data Analyst and full-stack developer working with React, TypeScript, .NET and SQL."
+    />
+    <meta name="author" content="Wiktor Mazepa" />
+    <link rel="canonical" href="https://portfolio.tunio.cloud/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#120d14" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph / link previews (LinkedIn, Messenger, Slack, …) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Wiktor Mazepa" />
+    <meta property="og:title" content="Wiktor Mazepa – Full-stack Developer & Data Analyst" />
+    <meta
+      property="og:description"
+      content="Projects, experience and skills: React, TypeScript, .NET, SQL, data pipelines and AI integrations."
+    />
+    <meta property="og:url" content="https://portfolio.tunio.cloud/" />
+    <meta property="og:image" content="https://portfolio.tunio.cloud/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Wiktor Mazepa – Full-stack Developer & Data Analyst" />
+    <meta property="profile:first_name" content="Wiktor" />
+    <meta property="profile:last_name" content="Mazepa" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Wiktor Mazepa",
+        "url": "https://portfolio.tunio.cloud/",
+        "image": "https://portfolio.tunio.cloud/og-image.png",
+        "jobTitle": "Junior Data Analyst",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Wrocław University of Science and Technology"
+        },
+        "knowsAbout": ["React", "TypeScript", ".NET", "SQL", "ETL", "Data analysis", "Full-stack development"],
+        "sameAs": ["https://github.com/Tuni0", "https://www.linkedin.com/in/wiktor-mazepa-812199338/"]
+      }
+    </script>
+
+    <!-- Apply the saved/system theme before first paint (no flash). Key must match src/lib/theme.ts. -->
+    <script>
+      (function () {
+        var theme = "system"
+        try {
+          theme = localStorage.getItem("portfolio-theme") || "system"
+        } catch (e) {}
+        var dark =
+          theme === "dark" ||
+          (theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        var root = document.documentElement
+        root.classList.add(dark ? "dark" : "light")
+        root.style.colorScheme = dark ? "dark" : "light"
+      })()
+    </script>
   </head>
   <body>
+    <noscript>This portfolio needs JavaScript – please enable it to see projects and experience.</noscript>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
